@@ -1,0 +1,24 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env*
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+todos.json
+
+# typescript
+*.tsbuildinfo
+
+# typescript
+*.tsbuildinfo
+
+.idea/*
+!.idea/prettier.xml
+.playwright-mcp/
+.claude/settings.local.json

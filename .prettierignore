@@ -1,0 +1,15 @@
+# Ignore everything recursively
+*
+
+# Only format the following files
+!*.ts
+!*.tsx
+!*.css
+
+# Other
+src/components/ui/**/*
+src/routeTree.gen.ts
+worker-configuration.d.ts
+
+# Check subdirectories too
+!*/

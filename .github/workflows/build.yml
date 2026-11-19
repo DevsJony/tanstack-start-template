@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_call:
+
+jobs:
+  build:
+    name: Check types and build
+    if: github.event_name != 'push' || github.event.repository.is_template
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Check types and lint
+        run: pnpm run type-check
+
+      - run: pnpm run build

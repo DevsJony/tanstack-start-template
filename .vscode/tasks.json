@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "Start dev server",
+			"detail": "vite dev"
+		},
+		{
+			"type": "npm",
+			"script": "start:convex",
+			"problemMatcher": [],
+			"label": "Start convex backend",
+			"detail": "convex dev"
+		}
+	]
+}

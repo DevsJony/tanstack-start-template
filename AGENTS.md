@@ -1,0 +1,13 @@
+- Always check types using `pnpm run type-check`.
+- Always use shadcn skill for UI components and interacting with shadcn.
+- Do not use long dashes (em dashes or en dashes like "—" or "–"). Always use a regular hyphen "-" instead. Also, do not use typographic or curly quotation marks such as „ ” or “ ”. Always use standard straight double quotes " for all quotations.
+- Never make try catches without logging the error, and never ignore errors silently. Always log the error with context.
+- When using [Convex](https://www.convex.dev/) for authentication always use Better Auth https://better-auth.com/docs/integrations/convex
+- When you want email sending:
+  - Plain TanStack Start on Cloudflare Workers: Use `send_email` binding (https://developers.cloudflare.com/email-service/configuration/send-bindings/)
+  - With Convex: Send emails through Cloudflare Email Service through API using their library [cloudflare](https://www.npmjs.com/package/cloudflare) ([docs](https://github.com/cloudflare/cloudflare-typescript/blob/main/src/resources/email-sending/api.md)).
+- When you want to use Cloudflare D1 then always use Drizzle ORM for working with SQL.
+- When you want to get or save state to search params then always use the [`nuqs`](https://www.npmjs.com/package/nuqs) lib.
+- To interact with Convex use CLI.
+- Cloudflare bindings are available via `import { env } from "cloudflare:workers"`. After changing `wrangler.jsonc` run `pnpm run cf-typegen`.
+- Use TanStack Start server functions (`createServerFn`) for server-side logic and file-based routes in `src/routes`.
